@@ -1,0 +1,43 @@
+
+
+
+<button (click)=toggleDisplayDivIf() >Add</button>  
+<div *ngIf="!isShowDivIf"><h2> Add New Employee</h2>
+    <table border="solid">
+    <form action="post" >
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+    <br><br>
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" required>
+    <br><br>
+    <label for="name"><b>MobileNo</b></label>
+    <input type="text" placeholder="Enter MobileNo" name="name" required>
+    <br><br>
+    <button class="button" type="submit">Save</button>
+    
+</form>
+    
+    </table>
+</div>  
+<br><br>
+
+<table border="1" bgColor="red">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>MobileNo</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let arr of array">
+            <td>{{arr.Name}}</td>
+            <td>{{arr.Address}}</td>
+            <td>{{arr.MobileNo}}</td>
+        </tr>
+
+        
+    </tbody>
+</table>
